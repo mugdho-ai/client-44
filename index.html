@@ -1,0 +1,1115 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Md Shah Alom Jadu | শিক্ষক • সাংবাদিক • ডিজিটাল ক্রিয়েটর</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Sans+Bengali:wght@300;400;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1a1208;
+        --paper: #f5f0e8;
+        --gold: #c9922a;
+        --gold-light: #e8b84b;
+        --rust: #8b3a1a;
+        --sage: #4a6741;
+        --cream: #faf6ed;
+        --border: #d4c5a0;
+        --text-muted: #6b5e42;
+        --shadow: rgba(26, 18, 8, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--cream);
+        color: var(--ink);
+        font-family: "Noto Sans Bengali", sans-serif;
+        font-weight: 300;
+        overflow-x: hidden;
+      }
+
+      /* ===== HEADER / MASTHEAD ===== */
+      .masthead {
+        background: var(--ink);
+        padding: 12px 0 8px;
+        text-align: center;
+        border-bottom: 3px solid var(--gold);
+      }
+      .masthead-date {
+        color: var(--gold-light);
+        font-family: "Crimson Pro", serif;
+        font-size: 0.8rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        opacity: 0.8;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        background: var(--ink);
+        padding: 60px 24px 50px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse at 20% 50%,
+            rgba(201, 146, 42, 0.08) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at 80% 30%,
+            rgba(139, 58, 26, 0.06) 0%,
+            transparent 50%
+          );
+      }
+      .hero-ornament {
+        color: var(--gold);
+        font-size: 1.2rem;
+        letter-spacing: 0.5em;
+        opacity: 0.5;
+        margin-bottom: 20px;
+      }
+
+      .avatar-ring {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        margin: 0 auto 24px;
+        padding: 4px;
+        background: linear-gradient(
+          135deg,
+          var(--gold),
+          var(--gold-light),
+          var(--gold)
+        );
+        position: relative;
+        z-index: 1;
+        animation: pulse-ring 3s ease-in-out infinite;
+      }
+      @keyframes pulse-ring {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(201, 146, 42, 0.3);
+        }
+        50% {
+          box-shadow: 0 0 0 12px rgba(201, 146, 42, 0);
+        }
+      }
+      .avatar-inner {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          #2c1e0a 0%,
+          #4a3215 50%,
+          #2c1e0a 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--gold-light);
+        overflow: hidden;
+      }
+      .hero-name {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.1;
+        position: relative;
+        z-index: 1;
+        letter-spacing: -0.01em;
+      }
+      .hero-name span {
+        color: var(--gold-light);
+      }
+      .hero-subtitle-bn {
+        font-family: "Noto Sans Bengali", sans-serif;
+        font-size: 1rem;
+        color: var(--gold-light);
+        font-weight: 300;
+        margin: 8px 0 4px;
+        opacity: 0.9;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-tags {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-tag {
+        border: 1px solid rgba(201, 146, 42, 0.4);
+        color: var(--gold-light);
+        padding: 5px 16px;
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-family: "Crimson Pro", serif;
+      }
+      .hero-rule {
+        width: 80px;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--gold),
+          transparent
+        );
+        margin: 24px auto 0;
+      }
+
+      /* ===== NAV ===== */
+      nav {
+        background: var(--paper);
+        border-bottom: 2px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 12px var(--shadow);
+      }
+      .nav-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        overflow-x: auto;
+      }
+      .nav-inner a {
+        display: block;
+        padding: 14px 20px;
+        font-family: "Crimson Pro", serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-decoration: none;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border-bottom: 3px solid transparent;
+        white-space: nowrap;
+        transition: all 0.2s;
+      }
+      .nav-inner a:hover {
+        color: var(--gold);
+        border-bottom-color: var(--gold);
+        background: rgba(201, 146, 42, 0.04);
+      }
+
+      /* ===== SECTIONS ===== */
+      .section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 24px;
+      }
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 36px;
+      }
+      .section-rule-left {
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .section-title-bn {
+        display: block;
+        font-size: 1rem;
+        font-family: "Noto Sans Bengali", sans-serif;
+        font-weight: 400;
+        color: var(--text-muted);
+        margin-top: 2px;
+      }
+      .section-ornament {
+        color: var(--gold);
+        font-size: 1.2rem;
+      }
+
+      /* ===== ABOUT ===== */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+      @media (max-width: 640px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .about-quote {
+        font-family: "Crimson Pro", serif;
+        font-style: italic;
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: var(--ink);
+        border-left: 3px solid var(--gold);
+        padding-left: 20px;
+        background: rgba(201, 146, 42, 0.04);
+        padding: 20px 20px 20px 24px;
+      }
+      .about-quote cite {
+        display: block;
+        font-style: normal;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-top: 10px;
+        letter-spacing: 0.05em;
+      }
+      .info-card {
+        background: var(--paper);
+        border: 1px solid var(--border);
+        padding: 24px;
+      }
+      .info-row {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(212, 197, 160, 0.5);
+      }
+      .info-row:last-child {
+        border-bottom: none;
+      }
+      .info-icon {
+        font-size: 1rem;
+        min-width: 20px;
+        text-align: center;
+        margin-top: 2px;
+      }
+      .info-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-family: "Crimson Pro", serif;
+        font-weight: 600;
+      }
+      .info-value {
+        font-size: 0.92rem;
+        color: var(--ink);
+        margin-top: 2px;
+      }
+
+      /* ===== ROLES / THREE PILLARS ===== */
+      .pillars {
+        background: var(--ink);
+        padding: 60px 0;
+      }
+      .pillars-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .pillars-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .pillars-header h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .pillars-header p {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: "Crimson Pro", serif;
+        font-size: 0.95rem;
+        margin-top: 6px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+      }
+      @media (max-width: 640px) {
+        .pillars-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+      }
+      .pillar {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(201, 146, 42, 0.2);
+        padding: 32px 24px;
+        text-align: center;
+        transition: all 0.3s;
+        cursor: default;
+      }
+      .pillar:hover {
+        background: rgba(201, 146, 42, 0.08);
+        border-color: rgba(201, 146, 42, 0.5);
+        transform: translateY(-4px);
+      }
+      .pillar-icon {
+        font-size: 2.2rem;
+        margin-bottom: 14px;
+      }
+      .pillar-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--gold-light);
+        margin-bottom: 6px;
+      }
+      .pillar-title-bn {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: "Noto Sans Bengali", sans-serif;
+        margin-bottom: 12px;
+      }
+      .pillar-desc {
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.7;
+      }
+
+      /* ===== EXPERIENCE ===== */
+      .timeline {
+        position: relative;
+        padding-left: 28px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--gold), var(--border));
+      }
+      .timeline-item {
+        position: relative;
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px dashed var(--border);
+      }
+      .timeline-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .timeline-dot {
+        position: absolute;
+        left: -25px;
+        top: 4px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--gold);
+        border: 2px solid var(--cream);
+        box-shadow: 0 0 0 2px var(--gold);
+      }
+      .timeline-date {
+        font-family: "Crimson Pro", serif;
+        font-size: 0.8rem;
+        color: var(--gold);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+      .timeline-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+      .timeline-org {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .badge {
+        display: inline-block;
+        background: rgba(201, 146, 42, 0.12);
+        color: var(--gold);
+        border: 1px solid rgba(201, 146, 42, 0.3);
+        padding: 2px 10px;
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        font-family: "Crimson Pro", serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-left: 8px;
+      }
+
+      /* ===== SOCIAL ===== */
+      .social-bg {
+        background: linear-gradient(
+          135deg,
+          #1a1208 0%,
+          #2c1e0a 50%,
+          #1a1208 100%
+        );
+        padding: 60px 0;
+      }
+      .social-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      @media (max-width: 500px) {
+        .social-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .social-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(201, 146, 42, 0.2);
+        padding: 16px 20px;
+        text-decoration: none;
+        transition: all 0.25s;
+        position: relative;
+        overflow: hidden;
+      }
+      .social-card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: var(--gold);
+        transform: scaleY(0);
+        transition: transform 0.25s;
+      }
+      .social-card:hover {
+        background: rgba(201, 146, 42, 0.08);
+        border-color: rgba(201, 146, 42, 0.5);
+        transform: translateX(4px);
+      }
+      .social-card:hover::before {
+        transform: scaleY(1);
+      }
+      .social-icon {
+        font-size: 1.6rem;
+        min-width: 32px;
+        text-align: center;
+      }
+      .social-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .social-handle {
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.45);
+        font-family: "Crimson Pro", serif;
+      }
+      .social-arrow {
+        margin-left: auto;
+        color: var(--gold);
+        opacity: 0;
+        transition: opacity 0.2s;
+        font-size: 1.1rem;
+      }
+      .social-card:hover .social-arrow {
+        opacity: 1;
+      }
+
+      /* ===== EDUCATION ===== */
+      .edu-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+      }
+      .edu-card {
+        background: var(--paper);
+        border: 1px solid var(--border);
+        padding: 28px;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+      }
+      .edu-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px var(--shadow);
+      }
+      .edu-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(
+          225deg,
+          rgba(201, 146, 42, 0.15) 0%,
+          transparent 60%
+        );
+      }
+      .edu-degree {
+        font-family: "Playfair Display", serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 6px;
+      }
+      .edu-school {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        margin-bottom: 8px;
+      }
+      .edu-year {
+        font-family: "Crimson Pro", serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--gold);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      /* ===== NEWS TICKER ===== */
+      .ticker {
+        background: var(--rust);
+        padding: 10px 0;
+        overflow: hidden;
+      }
+      .ticker-inner {
+        display: flex;
+        gap: 0;
+        white-space: nowrap;
+        animation: ticker-scroll 30s linear infinite;
+      }
+      @keyframes ticker-scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .ticker-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 30px;
+        font-family: "Noto Sans Bengali", sans-serif;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .ticker-dot {
+        color: var(--gold-light);
+        font-size: 0.5rem;
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: var(--ink);
+        padding: 40px 24px 20px;
+        text-align: center;
+        border-top: 3px solid var(--gold);
+      }
+      .footer-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--gold-light);
+        margin-bottom: 4px;
+      }
+      .footer-tagline {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.4);
+        font-family: "Crimson Pro", serif;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+      .footer-divider {
+        width: 60px;
+        height: 1px;
+        background: rgba(201, 146, 42, 0.4);
+        margin: 20px auto;
+      }
+      .footer-copy {
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.3);
+        font-family: "Crimson Pro", serif;
+      }
+
+      /* ===== ANIMATIONS ===== */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .separator {
+        text-align: center;
+        padding: 8px 0;
+        color: var(--border);
+        font-size: 1rem;
+        letter-spacing: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Masthead -->
+    <div class="masthead">
+      <div class="masthead-date" id="live-date">
+        দৈনিক ভোরের কাগজ • ফুলছড়ি উপজেলা প্রতিনিধি • গাইবান্ধা
+      </div>
+    </div>
+
+    <!-- Ticker -->
+    <div class="ticker">
+      <div class="ticker-inner" id="ticker">
+        <span class="ticker-item"
+          >📰 দৈনিক ভোরের কাগজ – ফুলছড়ি উপজেলা প্রতিনিধি
+          <span class="ticker-dot">●</span></span
+        >
+        <span class="ticker-item"
+          >🏫 সহকারী শিক্ষক – শাপলা হাই স্কুল
+          <span class="ticker-dot">●</span></span
+        >
+        <span class="ticker-item"
+          >📹 ডিজিটাল ক্রিয়েটর – YouTube & Social Media
+          <span class="ticker-dot">●</span></span
+        >
+        <span class="ticker-item"
+          >🎓 MBS in Accounting – গাইবান্ধা সরকারি কলেজ
+          <span class="ticker-dot">●</span></span
+        >
+        <span class="ticker-item"
+          >📍 গ্রাম: বুড়াইল, পোস্ট: উদাখালী, ফুলছড়ি, গাইবান্ধা
+          <span class="ticker-dot">●</span></span
+        >
+        <!-- duplicate for seamless loop -->
+        <span class="ticker-item"
+          >📰 দৈনিক ভোরের কাগজ – ফুলছড়ি উপজেলা প্রতিনিধি
+          <span class="ticker-dot">●</span></span
+        >
+        <span class="ticker-item"
+          >🏫 সহকারী শিক্ষক – শাপলা হাই স্কুল
+          <span class="ticker-dot">●</span></span
+        >
+        <span class="ticker-item"
+          >📹 ডিজিটাল ক্রিয়েটর – YouTube & Social Media
+          <span class="ticker-dot">●</span></span
+        >
+        <span class="ticker-item"
+          >🎓 MBS in Accounting – গাইবান্ধা সরকারি কলেজ
+          <span class="ticker-dot">●</span></span
+        >
+        <span class="ticker-item"
+          >📍 গ্রাম: বুড়াইল, পোস্ট: উদাখালী, ফুলছড়ি, গাইবান্ধা
+          <span class="ticker-dot">●</span></span
+        >
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero-ornament">— ✦ —</div>
+      <div class="avatar-ring">
+        <div class="avatar-inner">JADU</div>
+      </div>
+      <h1 class="hero-name">Md Shah Alom <span>Jadu</span></h1>
+      <p class="hero-subtitle-bn">মোঃ শাহ আলম জাদু</p>
+      <div class="hero-tags">
+        <span class="hero-tag">🏫 শিক্ষক</span>
+        <span class="hero-tag">📰 সাংবাদিক</span>
+        <span class="hero-tag">🎬 ডিজিটাল ক্রিয়েটর</span>
+      </div>
+      <div class="hero-rule"></div>
+    </header>
+
+    <!-- Nav -->
+    <nav>
+      <div class="nav-inner">
+        <a href="#about">পরিচয়</a>
+        <a href="#roles">ভূমিকা</a>
+        <a href="#experience">কর্মজীবন</a>
+        <a href="#education">শিক্ষা</a>
+        <a href="#social">সোশ্যাল</a>
+        <a href="#contact">যোগাযোগ</a>
+      </div>
+    </nav>
+
+    <!-- About -->
+    <section id="about">
+      <div class="section fade-in">
+        <div class="section-header">
+          <div class="section-rule-left"></div>
+          <div>
+            <div class="section-title">
+              পরিচিতি <span class="section-title-bn">About Me</span>
+            </div>
+          </div>
+          <div class="section-ornament">✦</div>
+        </div>
+        <div class="about-grid">
+          <div class="about-quote">
+            আসসালামু আলাইকুম। এই জনপ্রিয় সামাজিক যোগাযোগ মাধ্যমে আপনাদের
+            সহযোগিতায় প্রতিদিন নতুন কিছু শিখতে চাই। সমাজের ভালো-মন্দ,
+            শিক্ষা-সংস্কৃতি, ধর্মীয় শিক্ষা ও মানবাধিকার বিষয়ক বিভিন্ন বিষয়
+            উপস্থাপন করতে চেষ্টা করবো।
+            <cite>— মোঃ শাহ আলম জাদু</cite>
+          </div>
+          <div class="info-card">
+            <div class="info-row">
+              <div class="info-icon">👤</div>
+              <div>
+                <div class="info-label">নাম</div>
+                <div class="info-value">Md Shah Alom Jadu</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">🎂</div>
+              <div>
+                <div class="info-label">জন্মতারিখ</div>
+                <div class="info-value">১৫ জুন ১৯৮৫</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">📍</div>
+              <div>
+                <div class="info-label">ঠিকানা</div>
+                <div class="info-value">
+                  বুড়াইল, উদাখালী, ফুলছড়ি, গাইবান্ধা
+                </div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">🌐</div>
+              <div>
+                <div class="info-label">ভাষা</div>
+                <div class="info-value">বাংলা ও ইংরেজি</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">📰</div>
+              <div>
+                <div class="info-label">পত্রিকা</div>
+                <div class="info-value">
+                  দৈনিক ভোরের কাগজ<br /><small style="color: var(--text-muted)"
+                    >ফুলছড়ি উপজেলা প্রতিনিধি</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="separator">· · ·</div>
+
+    <!-- Three Pillars -->
+    <section id="roles" class="pillars fade-in">
+      <div class="pillars-inner">
+        <div class="pillars-header">
+          <h2>তিনটি পরিচয়</h2>
+          <p>Three Dimensions of Identity</p>
+        </div>
+        <div class="pillars-grid">
+          <div class="pillar">
+            <div class="pillar-icon">🏫</div>
+            <div class="pillar-title">শিক্ষক</div>
+            <div class="pillar-title-bn">Teacher</div>
+            <div class="pillar-desc">
+              শাপলা হাই স্কুলে সহকারী শিক্ষক হিসেবে কর্মরত। শিক্ষার্থীদের জীবন
+              গড়তে নিবেদিত।
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">📰</div>
+            <div class="pillar-title">সাংবাদিক</div>
+            <div class="pillar-title-bn">Reporter</div>
+            <div class="pillar-desc">
+              দৈনিক ভোরের কাগজের ফুলছড়ি উপজেলা প্রতিনিধি। সত্য ও নিরপেক্ষ সংবাদ
+              পরিবেশনে প্রতিশ্রুতিবদ্ধ।
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🎬</div>
+            <div class="pillar-title">ডিজিটাল ক্রিয়েটর</div>
+            <div class="pillar-title-bn">Digital Creator</div>
+            <div class="pillar-desc">
+              YouTube, Facebook, Instagram ও X-এ শিক্ষামূলক ও সামাজিক কন্টেন্ট
+              তৈরি করেন।
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="separator">· · ·</div>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="section fade-in">
+        <div class="section-header">
+          <div class="section-rule-left"></div>
+          <div>
+            <div class="section-title">
+              কর্মজীবন <span class="section-title-bn">Work Experience</span>
+            </div>
+          </div>
+          <div class="section-ornament">✦</div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">ফেব্রুয়ারি ২০১৯ – বর্তমান</div>
+            <div class="timeline-title">
+              সহকারী শিক্ষক <span class="badge">চলমান</span>
+            </div>
+            <div class="timeline-org">🏫 শাপলা হাই স্কুল, গাইবান্ধা</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">নভেম্বর ২০২১ – আগস্ট ২০২৪</div>
+            <div class="timeline-title">সভাপতি</div>
+            <div class="timeline-org">
+              🏛️ নাপিতের হাট সরকারি প্রাথমিক বিদ্যালয়, ফুলছড়ি, গাইবান্ধা
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">ফেব্রুয়ারি ২০২২ – মার্চ ২০২২</div>
+            <div class="timeline-title">সহকারী শিক্ষক (ব্যবসায় শিক্ষা)</div>
+            <div class="timeline-org">🏫 ধুলাউড়ি গার্লস হাই স্কুল</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">বর্তমান</div>
+            <div class="timeline-title">
+              উপজেলা প্রতিনিধি <span class="badge">সাংবাদিক</span>
+            </div>
+            <div class="timeline-org">
+              📰 দৈনিক ভোরের কাগজ – ফুলছড়ি, গাইবান্ধা
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="separator">· · ·</div>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="section fade-in">
+        <div class="section-header">
+          <div class="section-rule-left"></div>
+          <div>
+            <div class="section-title">
+              শিক্ষাজীবন <span class="section-title-bn">Education</span>
+            </div>
+          </div>
+          <div class="section-ornament">✦</div>
+        </div>
+        <div class="edu-cards">
+          <div class="edu-card">
+            <div class="edu-degree">🎓 MBS in Accounting</div>
+            <div class="edu-school">গাইবান্ধা সরকারি কলেজ, গাইবান্ধা</div>
+            <div class="edu-year">পাশের বছর: ২০১২</div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-degree">📘 উচ্চ বিদ্যালয়</div>
+            <div class="edu-school">উদাখালী হাই স্কুল, গাইবান্ধা</div>
+            <div class="edu-year">পাশের বছর: ২০০১</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media -->
+    <section id="social" class="social-bg fade-in">
+      <div class="pillars-inner">
+        <div class="pillars-header" style="margin-bottom: 32px">
+          <h2>সোশ্যাল মিডিয়া</h2>
+          <p>Follow on Social Media</p>
+        </div>
+        <div class="social-grid">
+          <a
+            class="social-card"
+            href="https://www.facebook.com/mdshahalomjadu/"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="social-icon">📘</div>
+            <div>
+              <div class="social-name">Facebook</div>
+              <div class="social-handle">mdshahalomjadu</div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+          <a
+            class="social-card"
+            href="https://www.youtube.com/@shahalomjadu"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="social-icon">📺</div>
+            <div>
+              <div class="social-name">YouTube</div>
+              <div class="social-handle">@shahalomjadu</div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+          <a
+            class="social-card"
+            href="https://x.com/mdshahalomjadu"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="social-icon">𝕏</div>
+            <div>
+              <div class="social-name">X (Twitter)</div>
+              <div class="social-handle">@shahalomjadu</div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+          <a
+            class="social-card"
+            href="https://www.instagram.com/mdshahalomjadu"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="social-icon">📸</div>
+            <div>
+              <div class="social-name">Instagram</div>
+              <div class="social-handle">mdshahalomjadu</div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section fade-in">
+        <div class="section-header">
+          <div class="section-rule-left"></div>
+          <div>
+            <div class="section-title">
+              যোগাযোগ <span class="section-title-bn">Contact</span>
+            </div>
+          </div>
+          <div class="section-ornament">✦</div>
+        </div>
+        <div class="info-card" style="max-width: 460px">
+          <div class="info-row">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-label">ঠিকানা</div>
+              <div class="info-value">
+                গ্রাম: বুড়াইল, পোস্ট: উদাখালী<br />উপজেলা: ফুলছড়ি, জেলা:
+                গাইবান্ধা<br />রংপুর ৫৭৬০
+              </div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">📰</div>
+            <div>
+              <div class="info-label">সংবাদ মাধ্যম</div>
+              <div class="info-value">
+                দৈনিক ভোরের কাগজ<br />ফুলছড়ি উপজেলা প্রতিনিধি
+              </div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">🌐</div>
+            <div>
+              <div class="info-label">সোশ্যাল মিডিয়া</div>
+              <div class="info-value">@mdshahalomjadu (সকল প্ল্যাটফর্মে)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-name">Md Shah Alom Jadu</div>
+      <div class="footer-tagline">শিক্ষক · সাংবাদিক · ডিজিটাল ক্রিয়েটর</div>
+      <div class="footer-divider"></div>
+      <div class="footer-copy">
+        © 2025 Md Shah Alom Jadu • দৈনিক ভোরের কাগজ • ফুলছড়ি, গাইবান্ধা
+      </div>
+    </footer>
+
+    <script>
+      // Live date in masthead
+      const dateEl = document.getElementById("live-date");
+      const now = new Date();
+      const opts = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        weekday: "long"
+      };
+      const bn = now.toLocaleDateString("bn-BD", opts);
+      dateEl.textContent = `দৈনিক ভোরের কাগজ • ফুলছড়ি উপজেলা প্রতিনিধি, গাইবান্ধা • ${bn}`;
+
+      // Scroll animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 }
+      );
+      document
+        .querySelectorAll(".fade-in")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
